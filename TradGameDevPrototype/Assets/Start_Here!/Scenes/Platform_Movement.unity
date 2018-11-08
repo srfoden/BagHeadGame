@@ -306,22 +306,22 @@ Prefab:
     - target: {fileID: 114747835809980902, guid: 1b06bd9bac286465f9042410a9d9e098,
         type: 2}
       propertyPath: xDirection
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114747835809980902, guid: 1b06bd9bac286465f9042410a9d9e098,
         type: 2}
       propertyPath: isFalling
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114747835809980902, guid: 1b06bd9bac286465f9042410a9d9e098,
         type: 2}
       propertyPath: zDirection
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114747835809980902, guid: 1b06bd9bac286465f9042410a9d9e098,
         type: 2}
       propertyPath: yDirection
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114747835809980902, guid: 1b06bd9bac286465f9042410a9d9e098,
         type: 2}
