@@ -10,32 +10,35 @@ public class Projectile_Movement : MonoBehaviour {
     public bool yDirection;
     public bool zDirection;
 
-    public float xRange;
-    public float yRange;
-    public float zRange;
-
     private float xSpeed;
     private float ySpeed;
     private float zSpeed;
 
-    private float xOrigin;
-    private float yOrigin;
-    private float zOrigin;
-
     private int counter;
     private bool onGround;
+
+    public float inclinedAngle;
+
 
 
     // Use this for initialization
     void Start()
     {
-        xSpeed = speed;
-        ySpeed = speed;
-        zSpeed = speed;
+        xSpeed = 0;
+        ySpeed = 0;
+        zSpeed = 0;
 
-        xOrigin = transform.position.x;
-        yOrigin = transform.position.y;
-        zOrigin = transform.position.z;
+        if (xDirection){
+        xSpeed = speed;
+        }
+        if (yDirection)
+        {
+            ySpeed = speed;
+        }
+        if (zDirection)
+        {
+            zSpeed = speed;
+        }
 
         onGround = false;
         counter = 0;
@@ -45,27 +48,24 @@ public class Projectile_Movement : MonoBehaviour {
     void Update()
     {
         Vector3 pos = transform.position;
-
+        float tangent = Mathf.Tan(inclinedAngle);
+        print(Mathf.Tan(inclinedAngle));
+        /*
         if (xDirection)
         {
             pos.x += xSpeed * Time.deltaTime;
            
         }
+        */
         if (yDirection)
         {
-            pos.y += ySpeed * Time.deltaTime;
-            if (pos.y >= (yRange + yOrigin) || pos.y <= (-yRange + yOrigin))
-            {
-                ySpeed *= -1;
-            }
+            pos.y -= (ySpeed* inclinedAngle) * Time.deltaTime;
+          
         }
         if (zDirection)
         {
-            pos.z += zSpeed * Time.deltaTime;
-            if (pos.z >= (zRange + zOrigin) || pos.z <= (-zRange + zOrigin))
-            {
-                zSpeed *= -1;
-            }
+            pos.z -= zSpeed * Time.deltaTime;
+      
         }
         transform.position = pos;
 
