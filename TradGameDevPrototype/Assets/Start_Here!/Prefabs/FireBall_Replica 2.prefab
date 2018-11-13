@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 135347805008564106}
   - component: {fileID: 114134728786605222}
   m_Layer: 0
-  m_Name: FireBall_Replica 1
+  m_Name: FireBall_Replica 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,11 +99,11 @@ MonoBehaviour:
   speed: 5
   xDirection: 0
   xnegDirection: 1
-  yDirection: 0
-  ynegDirection: 1
+  yDirection: 1
+  ynegDirection: 0
   zDirection: 0
   znegDirection: 0
-  inclinedAngle: 0.04
+  inclinedAngle: 0.05
 --- !u!135 &135347805008564106
 SphereCollider:
   m_ObjectHideFlags: 1
