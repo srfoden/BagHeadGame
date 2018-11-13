@@ -5,6 +5,8 @@ using UnityEngine;
 public class Projectile_Generator : MonoBehaviour {
 
     public GameObject projectilePrefab;
+    public GameObject particleSystem;
+
 
     public float startTime;
 
@@ -23,6 +25,8 @@ public class Projectile_Generator : MonoBehaviour {
 
     void ShootProjectile(){
         GameObject projectile = Instantiate(projectilePrefab) as GameObject;
+        GameObject particle = Instantiate(particleSystem) as GameObject;
         projectile.transform.position = transform.position;
+        particle.transform.position = transform.position;
     }
 }

@@ -7,8 +7,11 @@ public class Projectile_Movement : MonoBehaviour {
     public float speed;
 
     public bool xDirection;
+    public bool xnegDirection;
     public bool yDirection;
+    public bool ynegDirection;
     public bool zDirection;
+    public bool znegDirection;
 
     private float xSpeed;
     private float ySpeed;
@@ -31,13 +34,24 @@ public class Projectile_Movement : MonoBehaviour {
         if (xDirection){
         xSpeed = speed;
         }
+        else if (xnegDirection){
+            xSpeed = -speed;
+        }
         if (yDirection)
         {
             ySpeed = speed;
         }
+        else if (ynegDirection)
+        {
+            ySpeed = -speed;
+        }
         if (zDirection)
         {
             zSpeed = speed;
+        }
+        else if (znegDirection)
+        {
+            zSpeed = -speed;
         }
 
         onGround = false;
@@ -50,21 +64,21 @@ public class Projectile_Movement : MonoBehaviour {
         Vector3 pos = transform.position;
         float tangent = Mathf.Tan(inclinedAngle);
         print(Mathf.Tan(inclinedAngle));
-        /*
-        if (xDirection)
+
+        if (xDirection || xnegDirection)
         {
             pos.x += xSpeed * Time.deltaTime;
            
         }
-        */
-        if (yDirection)
+
+        if (yDirection || ynegDirection)
         {
-            pos.y -= (ySpeed* inclinedAngle) * Time.deltaTime;
+            pos.y += (ySpeed* inclinedAngle) * Time.deltaTime;
           
         }
-        if (zDirection)
+        if (zDirection || znegDirection)
         {
-            pos.z -= zSpeed * Time.deltaTime;
+            pos.z += zSpeed * Time.deltaTime;
       
         }
         transform.position = pos;
