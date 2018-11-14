@@ -13,6 +13,9 @@ public class Projectile_Movement : MonoBehaviour {
     public bool zDirection;
     public bool znegDirection;
 
+    public float xMax;
+    public float zMax;
+
     private float xSpeed;
     private float ySpeed;
     private float zSpeed;
@@ -68,6 +71,17 @@ public class Projectile_Movement : MonoBehaviour {
         if (xDirection || xnegDirection)
         {
             pos.x += xSpeed * Time.deltaTime;
+
+            if (xDirection){
+                if (pos.x > xMax){
+                    Destroy(this.gameObject);
+                }
+            }
+            else if (xnegDirection){
+                if (pos.x < xMax){
+                    Destroy(this.gameObject);
+                }
+            }
            
         }
 

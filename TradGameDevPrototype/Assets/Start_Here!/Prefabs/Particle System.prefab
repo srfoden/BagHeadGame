@@ -60,6 +60,8 @@ MonoBehaviour:
   ynegDirection: 1
   zDirection: 0
   znegDirection: 0
+  xMax: -30
+  zMax: 0
   inclinedAngle: 0.0590838
 --- !u!198 &198050914918409970
 ParticleSystem:

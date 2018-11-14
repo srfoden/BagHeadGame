@@ -103,6 +103,8 @@ MonoBehaviour:
   ynegDirection: 0
   zDirection: 0
   znegDirection: 0
+  xMax: -30
+  zMax: 0
   inclinedAngle: 0.05
 --- !u!135 &135347805008564106
 SphereCollider:

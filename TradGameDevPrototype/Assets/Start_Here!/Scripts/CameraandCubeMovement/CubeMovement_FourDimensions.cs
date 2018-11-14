@@ -31,6 +31,7 @@ public class CubeMovement_FourDimensions : MonoBehaviour
     void Update()
     {
         Vector3 pos = transform.position;  //Get the position part of transform
+
         if (counter == 0)
         {
             if (Input.GetKey("up"))
