@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/menu_workflow/main_menu.unity
+    guid: 50f99ef35c09eeb499d2728a72db79e1
+  - enabled: 1
+    path: Assets/Start_Here!/Scenes/VerticalSlice2.unity
+    guid: 67ba40963d8db47b9b1bd8ec0200d559
+  - enabled: 1
+    path: Assets/menu_workflow/credits scene.unity
+    guid: a3c27400fcfc30a49b067f83f3c2edc7
   m_configObjects: {}
