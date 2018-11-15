@@ -66,7 +66,7 @@ public class Projectile_Movement : MonoBehaviour {
     {
         Vector3 pos = transform.position;
         float tangent = Mathf.Tan(inclinedAngle);
-        print(Mathf.Tan(inclinedAngle));
+        //print(Mathf.Tan(inclinedAngle));
 
         if (xDirection || xnegDirection)
         {
