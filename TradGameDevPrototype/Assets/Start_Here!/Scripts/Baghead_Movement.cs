@@ -21,11 +21,6 @@ public class Baghead_Movement : MonoBehaviour {
             anim.SetBool("isDown",false);
         }
 
-        if (Input.GetKeyUp("p")){
-            anim.SetBool("isSpace", true);
-        }
-       
-
-
+      
     }
 }

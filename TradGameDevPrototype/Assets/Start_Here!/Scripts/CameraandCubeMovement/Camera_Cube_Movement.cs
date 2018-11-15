@@ -16,6 +16,8 @@ public class Camera_Cube_Movement : MonoBehaviour {
     public float zMax1, zMax2, zMax3,zMax4;
     public float zMin1,zMin2, zMin3,zMin4;
 
+    public float yNum1, yNum2, yNum3, yNum4, yNum5, yNum6, yNum7, yNum8, yNum9, yNum10, yNum11;
+
     private int test;
 
 
@@ -213,7 +215,7 @@ public class Camera_Cube_Movement : MonoBehaviour {
             transform.rotation = Quaternion.Slerp(transform.rotation, Brot3, Time.deltaTime * rotationSpeed);
             versionNUM = 1;
         }
-        if (pos.z > zMax1 && pos.y > 4)
+        if (pos.z > zMax1 && pos.y > yNum1)
         {
             cameraPOS.rotation = Quaternion.Slerp(cameraPOS.rotation, rot4, Time.deltaTime * rotationSpeed);
             transform.rotation = Quaternion.Slerp(transform.rotation, Brot4, Time.deltaTime * rotationSpeed);
@@ -221,56 +223,67 @@ public class Camera_Cube_Movement : MonoBehaviour {
         }
 
 
-        if (pos.y > 5 && pos.x > xMax2 )
+        if (pos.y > yNum2 && pos.x > xMax2 )
         {
             cameraPOS.rotation = Quaternion.Slerp(cameraPOS.rotation, rot1, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Brot1, Time.deltaTime * rotationSpeed);
             versionNUM = 3;
         }
-        if (pos.z < zMin2 && pos.y > 6)
+        if (pos.z < zMin2 && pos.y > yNum3)
         {
             cameraPOS.rotation = Quaternion.Slerp(cameraPOS.rotation, rot2, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Brot2, Time.deltaTime * rotationSpeed);
             versionNUM = 2;
         }
-        if (pos.x < xMin2 && pos.y > 7)
+        if (pos.x < xMin2 && pos.y > yNum4)
         {
             cameraPOS.rotation = Quaternion.Slerp(cameraPOS.rotation, rot3, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Brot3, Time.deltaTime * rotationSpeed);
             versionNUM = 1;
         }
-        if (pos.z > zMax2 && pos.y > 8)
+        if (pos.z > zMax2 && pos.y > yNum5)
         {
             cameraPOS.rotation = Quaternion.Slerp(cameraPOS.rotation, rot4, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Brot4, Time.deltaTime * rotationSpeed);
             versionNUM = 4;
         }
 
-        if (pos.y > 9 && pos.x > xMax3)
+        if (pos.y > yNum6 && pos.x > xMax3)
         {
             cameraPOS.rotation = Quaternion.Slerp(cameraPOS.rotation, rot1, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Brot1, Time.deltaTime * rotationSpeed);
             versionNUM = 3;
         }
-        if (pos.z < zMin3 && pos.y > 10)
+        if (pos.z < zMin3 && pos.y > yNum7)
         {
             cameraPOS.rotation = Quaternion.Slerp(cameraPOS.rotation, rot2, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Brot2, Time.deltaTime * rotationSpeed);
             versionNUM = 2;
         }
-        if (pos.x < xMin3 && pos.y > 11)
+        if (pos.x < xMin3 && pos.y > yNum8)
         {
             cameraPOS.rotation = Quaternion.Slerp(cameraPOS.rotation, rot3, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Brot3, Time.deltaTime * rotationSpeed);
             versionNUM = 1;
         }
-        if (pos.z > zMax3 && pos.y > 12)
+        if (pos.z > zMax3 && pos.y > yNum9)
         {
             cameraPOS.rotation = Quaternion.Slerp(cameraPOS.rotation, rot4, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Brot4, Time.deltaTime * rotationSpeed);
             versionNUM = 4;
+
         }
 
-        if (pos.y > 13 && pos.x > xMax4)
+        if (pos.y > yNum10 && pos.x > xMax4)
         {
             cameraPOS.rotation = Quaternion.Slerp(cameraPOS.rotation, rot1, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Brot1, Time.deltaTime * rotationSpeed);
             versionNUM = 3;
         }
-        if (pos.z < zMin4 && pos.y > 14)
+        if (pos.z < zMin4 && pos.y > yNum11)
         {
             cameraPOS.rotation = Quaternion.Slerp(cameraPOS.rotation, rot2, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Brot2, Time.deltaTime * rotationSpeed);
             versionNUM = 2;
         }
        

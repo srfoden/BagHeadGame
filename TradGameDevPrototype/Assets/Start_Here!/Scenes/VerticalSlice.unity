@@ -1859,6 +1859,18 @@ MonoBehaviour:
   zMin2: -9.01
   zMin3: -6.1
   zMin4: -2.5
+  yNum1: 4
+  yNum2: 5
+  yNum3: 6
+  yNum4: 7
+  yNum5: 8
+  yNum6: 9
+  yNum7: 10
+  yNum8: 11
+  yNum9: 12
+  yNum10: 13
+  yNum11: 14
+  yNum12: 15
   Movementspeed: 5
   yVelocity: 4
   onGround: 0
