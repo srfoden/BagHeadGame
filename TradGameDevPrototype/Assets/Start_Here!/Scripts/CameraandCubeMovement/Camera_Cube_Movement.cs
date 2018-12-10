@@ -156,7 +156,16 @@ public class Camera_Cube_Movement : MonoBehaviour {
         }
         */
 
+       
+
         transform.position = pos;         //Set the transform.position to be the Vector3
+
+        Vector3 pos2 = transform.position;
+
+        if (pos2.y < 0f){
+            Vector3 reset = new Vector3(-19.99f, 1.05f, 19.13f);
+            transform.position = reset;
+        }
 
     
         if (onGround)
@@ -181,7 +190,11 @@ public class Camera_Cube_Movement : MonoBehaviour {
             anim.SetBool("isSpace", false);
         }
 
-         
+        if (other.gameObject.CompareTag("Projectile")){
+            Vector3 reset = new Vector3(-19.99f, 1.05f, 19.13f);
+            transform.position = reset;
+        }
+
         }
     
 
