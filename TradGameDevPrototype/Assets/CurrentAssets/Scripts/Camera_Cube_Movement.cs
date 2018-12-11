@@ -64,7 +64,9 @@ public class Camera_Cube_Movement : MonoBehaviour {
     void Update()
     {
         Vector3 pos = transform.position;  //Get the position part of transform
-        //Quaternion rot = Quaternion.Euler(30f, 90f * counter, 0f);
+     
+
+
 
         if (versionNUM == 1){
             if (Input.GetKey("up"))
@@ -146,15 +148,6 @@ public class Camera_Cube_Movement : MonoBehaviour {
                 pos.z += Movementspeed * Time.deltaTime;   //Go left
             }
         }
-        /*
-        if (Input.GetKey("up")){
-            pos.y += ((Movementspeed * Time.deltaTime) * .05f);
-        }
-        else if (Input.GetKey("down"))
-        {
-            pos.y -= ((Movementspeed * Time.deltaTime) * .05f);
-        }
-        */
 
        
 
