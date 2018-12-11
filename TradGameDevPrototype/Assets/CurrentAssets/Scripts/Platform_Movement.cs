@@ -18,6 +18,8 @@ public class Platform_Movement : MonoBehaviour {
 
     public float fallTime;
 
+
+
     private float xSpeed;
     private float ySpeed;
     private float zSpeed;
@@ -92,4 +94,5 @@ public class Platform_Movement : MonoBehaviour {
         Rigidbody rb = gameObject.AddComponent<Rigidbody>() as Rigidbody;
     }
 
+   
 }

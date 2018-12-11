@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Projectile
+  - Platform
   layers:
   - Default
   - TransparentFX
