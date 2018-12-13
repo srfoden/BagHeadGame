@@ -214,7 +214,6 @@ public class Game_Script : MonoBehaviour {
 
         Vector3 pos = transform.position;  //Get the position part of transform
 
-
         Quaternion rot1 = Quaternion.Euler(15f, 180f, 0f);
         Quaternion rot2 = Quaternion.Euler(15f, 270f, 0f);
         Quaternion rot3 = Quaternion.Euler(15f, 0f, 0f);
@@ -224,9 +223,6 @@ public class Game_Script : MonoBehaviour {
         Quaternion Brot2 = Quaternion.Euler(0f, 270f, 0f);
         Quaternion Brot3 = Quaternion.Euler(0f, 0f, 0f);
         Quaternion Brot4 = Quaternion.Euler(0f, 90f, 0f);
-
-
-      
 
         if (turn1 == 0 && pos.x > xMax1)
         {
@@ -241,14 +237,14 @@ public class Game_Script : MonoBehaviour {
             turn1++;
             versionNUM = 2;
         }
-
-        if (turn3 == 0 && pos.x > xMax1)
+        if (turn3 == 0 && pos.x < xMin1)
         {
             cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot3, Time.deltaTime * rotationSpeed);
             transform.rotation = Quaternion.Lerp(transform.rotation, Brot3, Time.deltaTime * rotationSpeed);
             turn2++;
             versionNUM = 1;
         }
+        /*
         if (turn4 == 0 && pos.z < zMin1)
         {
             cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot4, Time.deltaTime * rotationSpeed);
@@ -256,6 +252,7 @@ public class Game_Script : MonoBehaviour {
             turn3++;
             versionNUM = 4;
         }
+
         /*
         if (turn5 == 0 && pos.x < xMin1)
         {
