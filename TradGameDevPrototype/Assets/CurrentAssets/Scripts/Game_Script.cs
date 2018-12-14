@@ -42,7 +42,7 @@ public class Game_Script : MonoBehaviour {
     public float zMax1, zMax2, zMax3,zMax4;
     public float zMin1,zMin2, zMin3,zMin4;
 
-    public float yNum1, yNum2, yNum3, yNum4, yNum5, yNum6, yNum7, yNum8, yNum9, yNum10, yNum11;
+    public float yNum1, yNum2, yNum3, yNum4, yNum5, yNum6, yNum7, yNum8, yNum9, yNum10, yNum11, yNum12, yNum13;
 
     public float Movementspeed;   //Speed of the cube
     public float yVelocity;            //yVal for Speed when cube jumps
@@ -244,104 +244,95 @@ public class Game_Script : MonoBehaviour {
             turn2++;
             versionNUM = 1;
         }
-        /*
-        if (turn4 == 0 && pos.z < zMin1)
+
+      
+        if (turn4 == 0 && pos.z > zMax1 && pos.y > yNum1)
         {
             cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot4, Time.deltaTime * rotationSpeed);
             transform.rotation = Quaternion.Lerp(transform.rotation, Brot4, Time.deltaTime * rotationSpeed);
             turn3++;
             versionNUM = 4;
         }
-
-        /*
-        if (turn5 == 0 && pos.x < xMin1)
+        if (turn5 == 0 && pos.y > yNum2 && pos.x > xMax2)
         {
             cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot1, Time.deltaTime * rotationSpeed);
             transform.rotation = Quaternion.Lerp(transform.rotation, Brot1, Time.deltaTime * rotationSpeed);
             turn4++;
+            versionNUM = 3;
+        }
+        if (turn6 == 0 && pos.z < zMin2 && pos.y > yNum3)
+        {
+            cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot2, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Brot2, Time.deltaTime * rotationSpeed);
+            turn5++;
+            versionNUM = 2;
+        }
+
+        if (turn7 == 0 && pos.x < xMin2 && pos.y > yNum4)
+        {
+            cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot3, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Brot3, Time.deltaTime * rotationSpeed);
+            turn6++;
             versionNUM = 1;
         }
-        if (turn6 == 0 && pos.z > zMax1 && pos.y > yNum1)
+        if (turn8 == 0 && pos.z > zMax2 && pos.y > yNum5)
         {
-            cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot1, Time.deltaTime * rotationSpeed);
-            transform.rotation = Quaternion.Lerp(transform.rotation, Brot1, Time.deltaTime * rotationSpeed);
-            turn5++;
+            cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot4, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Brot4, Time.deltaTime * rotationSpeed);
+            turn7++;
             versionNUM = 4;
         }
 
-        if (turn7 == 0 && pos.y > yNum2 && pos.x > xMax2)
-        {
-            cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot1, Time.deltaTime * rotationSpeed);
-            transform.rotation = Quaternion.Lerp(transform.rotation, Brot1, Time.deltaTime * rotationSpeed);
-            turn6++;
-            versionNUM = 3;
-        }
-        if (turn8 == 0 && pos.z < zMin2 && pos.y > yNum3)
-        {
-            cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot1, Time.deltaTime * rotationSpeed);
-            transform.rotation = Quaternion.Lerp(transform.rotation, Brot1, Time.deltaTime * rotationSpeed);
-            turn7++;
-            versionNUM = 2;
-        }
-        if (turn9 == 0 && pos.x < xMin2 && pos.y > yNum4)
+        if (turn9 == 0 && pos.y > yNum6 && pos.x > xMax3)
         {
             cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot1, Time.deltaTime * rotationSpeed);
             transform.rotation = Quaternion.Lerp(transform.rotation, Brot1, Time.deltaTime * rotationSpeed);
             turn8++;
+            versionNUM = 3;
+        }
+        if (turn10 == 0 && pos.z < zMin3 && pos.y > yNum7)
+        {
+            cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot2, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Brot2, Time.deltaTime * rotationSpeed);
+            turn9++;
+            versionNUM = 2;
+        }
+
+        if (turn11 == 0 && pos.x < xMin3 && pos.y > yNum8)
+        {
+            cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot3, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Brot3, Time.deltaTime * rotationSpeed);
+            turn10++;
             versionNUM = 1;
         }
-        if (turn10 == 0 && pos.z > zMax2 && pos.y > yNum5)
+        if (turn12 == 0 && pos.z > zMax3 && pos.y > yNum9)
         {
-            cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot1, Time.deltaTime * rotationSpeed);
-            transform.rotation = Quaternion.Lerp(transform.rotation, Brot1, Time.deltaTime * rotationSpeed);
-            turn9++;
+            cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot4, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Brot4, Time.deltaTime * rotationSpeed);
+            turn11++;
             versionNUM = 4;
         }
 
-        if (turn11 == 0 && pos.y > yNum6 && pos.x > xMax3)
-        {
-            cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot1, Time.deltaTime * rotationSpeed);
-            transform.rotation = Quaternion.Lerp(transform.rotation, Brot1, Time.deltaTime * rotationSpeed);
-            turn10++;
-            versionNUM = 3;
-        }
-        if (turn12 == 0 && pos.z < zMin3 && pos.y > yNum7)
-        {
-            cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot1, Time.deltaTime * rotationSpeed);
-            transform.rotation = Quaternion.Lerp(transform.rotation, Brot1, Time.deltaTime * rotationSpeed);
-            turn11++;
-            versionNUM = 2;
-        }
-        if (turn13 == 0 && pos.x < xMin3 && pos.y > yNum8)
+        if (turn13 == 0 && pos.y > yNum10 && pos.x > xMax4)
         {
             cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot1, Time.deltaTime * rotationSpeed);
             transform.rotation = Quaternion.Lerp(transform.rotation, Brot1, Time.deltaTime * rotationSpeed);
             turn12++;
-            versionNUM = 1;
-        }
-        if (turn14 == 0 && pos.z > zMax3 && pos.y > yNum9)
-        {
-            cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot1, Time.deltaTime * rotationSpeed);
-            transform.rotation = Quaternion.Lerp(transform.rotation, Brot1, Time.deltaTime * rotationSpeed);
-            turn13++;
-            versionNUM = 4;
-        }
-
-        if (turn15 == 0 && pos.y > yNum10 && pos.x > xMax4)
-        {
-            cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot1, Time.deltaTime * rotationSpeed);
-            transform.rotation = Quaternion.Lerp(transform.rotation, Brot1, Time.deltaTime * rotationSpeed);
-            turn14++;
             versionNUM = 3;
         }
-        if (turn16 == 0 && pos.z < zMin4 && pos.y > yNum11)
+        if (turn14 == 0 && pos.z < zMin4 && pos.y > yNum11)
         {
-            cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot1, Time.deltaTime * rotationSpeed);
-            transform.rotation = Quaternion.Lerp(transform.rotation, Brot1, Time.deltaTime * rotationSpeed);
-            turn15++;
+            cameraPOS.rotation = Quaternion.Lerp(cameraPOS.rotation, rot2, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Brot2, Time.deltaTime * rotationSpeed);
+            turn13++;
             versionNUM = 2;
         }
-        */
+       
+        if (turn13 == 1){
+            ChangeScene("WIN");
+        }
+       
+
 
         if (versionNUM == 1)
         {
